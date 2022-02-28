@@ -11,7 +11,7 @@ pipeline {
         branch 'main'
       }
       steps {
-        sh echo 'Deployando'
+        sh 'echo Deployando'
       }
     }
   }
