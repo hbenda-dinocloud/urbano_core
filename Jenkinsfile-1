@@ -1,0 +1,18 @@
+pipeline {
+  agent any
+  stages {
+    stage('Test') {
+      steps {
+        sh 'liquibase --version'
+      }
+    }
+    stage('Deploy') {
+      when {
+        branch 'main'
+      }
+      steps {
+        sh echo 'Deployando'
+      }
+    }
+  }
+}
