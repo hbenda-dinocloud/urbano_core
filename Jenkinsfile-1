@@ -6,13 +6,5 @@ pipeline {
         sh 'liquibase --version'
       }
     }
-    stage('Deploy') {
-      when {
-        branch 'main'
-      }
-      steps {
-        sh 'echo Deployando'
-      }
-    }
   }
 }
